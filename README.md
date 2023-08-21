@@ -1,9 +1,16 @@
-# Async IO for Flink Applications with Amazon Kinesis Data Analytics
+# Async IO for Flink Applications with Amazon Managed Service for Apache Flink (formerly Amazon Kinesis Data Analytics)
+
+--------
+>  #### 🚨 August 30, 2023: Amazon Kinesis Data Analytics has been renamed to [Amazon Managed Service for Apache Flink](https://aws.amazon.com/managed-service-apache-flink).
+
+--------
 
 This project is heavily influenced by the Apache Flink AsyncIO documentation and code samples which describe the methods for making asynchronous calls to an external data source. The overall idea behind the AsyncIO function is that we are utilizing the fact that this call can be made asynchronously (at the same time as other requests) to ultimately improve throughput.
 
 ![dag](img/dag.png)
+![dag](img/dag.png)
 ![cw](img/cw_metrics.png)
+
 ## How does it work?
 This codebase reads from a Kinesis Data Stream, invokes the AsyncFunction with an Apache HTTP Client and posts to an HTTP endpoint. The results are then returned asynchronously and streamed to the sink (KDS). This was done to showcase that the throughput was keeping up despite a slow Rest API.
 
