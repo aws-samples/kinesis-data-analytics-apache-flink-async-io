@@ -8,6 +8,7 @@ import org.apache.flink.streaming.api.functions.async.ResultFuture;
 import org.apache.flink.streaming.api.functions.async.RichAsyncFunction;
 import org.asynchttpclient.*;
 
+import java.time.Duration;
 import java.util.Collections;
 import java.util.concurrent.*;
 import java.util.function.Supplier;
@@ -30,7 +31,7 @@ class SampleAsyncFunction extends RichAsyncFunction<String, String> {
     @Override
     public void open(Configuration parameters) throws Exception {
         super.open(parameters);
-        DefaultAsyncHttpClientConfig.Builder clientBuilder = Dsl.config().setConnectTimeout(500);
+        DefaultAsyncHttpClientConfig.Builder clientBuilder = Dsl.config().setConnectTimeout(Duration.ofMillis(500));
         client = Dsl.asyncHttpClient(clientBuilder);
 
     }

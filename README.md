@@ -1,7 +1,13 @@
 # Async IO for Flink Applications with Amazon Managed Service for Apache Flink (formerly Amazon Kinesis Data Analytics)
 
 --------
->  #### 🚨 August 30, 2023: Amazon Kinesis Data Analytics has been renamed to [Amazon Managed Service for Apache Flink](https://aws.amazon.com/managed-service-apache-flink).
+>  ####  🚨 This example is obsolete. For an up-to-date example of Flink Async I/O refer to 
+> [Managed Service for Apache Flink examples : AsyncIO](https://github.com/aws-samples/amazon-managed-service-for-apache-flink-examples/tree/main/java/AsyncIO)
+
+--------
+
+--------
+>  August 30, 2023: Amazon Kinesis Data Analytics has been renamed to [Amazon Managed Service for Apache Flink](https://aws.amazon.com/managed-service-apache-flink).
 
 --------
 
