@@ -9,6 +9,8 @@ import org.asynchttpclient.DefaultAsyncHttpClientConfig;
 import org.asynchttpclient.Dsl;
 import org.asynchttpclient.Response;
 
+import java.time.Duration;
+
 
 class SampleSyncFunction extends RichMapFunction<String, String> {
 
@@ -23,7 +25,7 @@ class SampleSyncFunction extends RichMapFunction<String, String> {
     public String map(String value) throws Exception {
 
         // Define client
-        DefaultAsyncHttpClientConfig.Builder clientBuilder = Dsl.config().setConnectTimeout(500);
+        DefaultAsyncHttpClientConfig.Builder clientBuilder = Dsl.config().setConnectTimeout(Duration.ofMillis(500));
         AsyncHttpClient client = Dsl.asyncHttpClient(clientBuilder);
 
         // prepare body
